@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -25,7 +23,7 @@ gem 'puma', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rswag-api'
 gem 'rswag-ui'
-gem 'rubocop', '~> 1.66', '>= 1.66.1'
+gem 'rubocop', '~> 1.66', '>= 1.66.1', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
@@ -40,7 +38,7 @@ end
 group :test do
   gem 'simplecov', '~> 0.22.0', require: false
 end
-
+  
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
