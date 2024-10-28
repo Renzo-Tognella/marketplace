@@ -18,8 +18,12 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+  config.include Request::JsonHelpers, type: :controller
   config.fixture_path = Rails.root.join('spec/fixtures')
-
+  config.include Request::HeadersHelpers, type: :controller
+  config.before(:each, type: :controller) do
+    include_default_accept_headers
+  end
   config.use_transactional_fixtures = true
 
   config.infer_spec_type_from_file_location!
