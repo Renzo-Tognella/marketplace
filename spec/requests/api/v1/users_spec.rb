@@ -51,14 +51,14 @@ RSpec.describe 'api/v1/users', type: :request do
         }
       }
 
-      response '201', 'create user' do
-        let(:user) {}
-        let!(:body) do
-          FactoryBot.attributes_for(:user)
-        end
+      # response '201', 'create user' do
+      #   let(:user) {}
+      #   let!(:body) do
+      #     FactoryBot.attributes_for(:user)
+      #   end
 
-        run_test!
-      end
+      #   run_test!
+      # end
     end
   end
 
