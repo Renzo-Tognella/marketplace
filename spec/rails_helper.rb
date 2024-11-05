@@ -21,6 +21,7 @@ RSpec.configure do |config|
   config.include Request::JsonHelpers, type: :controller
   config.fixture_path = Rails.root.join('spec/fixtures')
   config.include Request::HeadersHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers
   config.before(:each, type: :controller) do
     include_default_accept_headers
   end
