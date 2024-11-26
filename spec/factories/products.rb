@@ -4,6 +4,6 @@ FactoryBot.define do
     price { 100.50 }
     description { FFaker::Book.description }
     published { false }
-    user_id { 1 }
+    user
   end
 end
