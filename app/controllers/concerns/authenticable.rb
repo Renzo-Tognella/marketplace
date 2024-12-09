@@ -3,7 +3,7 @@ module Authenticable
     @current_user ||= User.find_by(token: request.headers['Authorization'])
   end
 
-  def authenticate_with_token
+  def authenticate_with_token!
     render json: { errors: 'Not authenticated' }, status: :unauthorized unless user_signed_in?
   end
 

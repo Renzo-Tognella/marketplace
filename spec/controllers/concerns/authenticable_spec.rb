@@ -20,7 +20,7 @@ describe Authenticable do
     end
   end
 
-  describe "#authenticate_with_token" do
+  describe "#authenticate_with_token!" do
     before do
       @user = FactoryBot.create(:user)
       request.headers['Authorization'] = @user.token
